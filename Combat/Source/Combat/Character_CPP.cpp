@@ -20,6 +20,9 @@ ACharacter_CPP::ACharacter_CPP()
 	MyCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MyCamera"));
 	MyCamera->SetupAttachment(CameraArm);
 
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->RotationRate = FRotator(40000.0f, 40000.0f, 0.0f);
+
 	GetCharacterMovement()->JumpZVelocity = 400.f;
 	GetCharacterMovement()->AirControl = 500.f;
 
