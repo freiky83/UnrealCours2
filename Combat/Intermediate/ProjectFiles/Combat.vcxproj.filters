@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Combat.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{72E1EB00-CF80-4414-A581-87BACC79B966}</UniqueIdentifier>
+      <UniqueIdentifier>{A6ED0723-E64C-4801-93AE-93C691AFAABD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Combat.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{5C83062D-5708-429F-B23D-1167452AAC67}</UniqueIdentifier>
+      <UniqueIdentifier>{34104AEB-83AF-4002-A197-0DA9BC986124}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Combat">
-      <UniqueIdentifier>{7CE668C9-B3BD-42D1-B4F3-D33419A394BC}</UniqueIdentifier>
+      <UniqueIdentifier>{A10AC380-567A-4057-8B40-10877F7C63C7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Combat\Character_CPP.cpp">
       <Filter>Source\Combat</Filter>

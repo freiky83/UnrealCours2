@@ -15,9 +15,13 @@ ACharacter_CPP::ACharacter_CPP()
 	CameraArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Camera_Arm"));
 	CameraArm->SetupAttachment(GetRootComponent());
 	CameraArm->TargetArmLength = 350.f;
+	CameraArm->bUsePawnControlRotation = true;
 
 	MyCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MyCamera"));
 	MyCamera->SetupAttachment(CameraArm);
+
+	GetCharacterMovement()->JumpZVelocity = 400.f;
+	GetCharacterMovement()->AirControl = 500.f;
 
 }
 
@@ -56,10 +60,6 @@ void ACharacter_CPP::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	
 	//PlayerInputComponent->BindAxis("TurnRate", this, &ACharacter_CPP::Turn);
 	//PlayerInputComponent->BindAxis("LookUpRate", this, &ACharacter_CPP::LookUp);
-
-	GetCharacterMovement()->JumpZVelocity = 400.f;
-	GetCharacterMovement()->AirControl = 500.f;
-
 }
 
 void ACharacter_CPP::MoveForward(float Value) {
