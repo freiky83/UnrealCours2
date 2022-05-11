@@ -16,7 +16,7 @@ ACharacter_CPP::ACharacter_CPP()
 	CameraArm->TargetArmLength = 600.f;
 
 	MyCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MyCamera"));
-	CameraArm->SetupAttachment(CameraArm);
+	MyCamera->SetupAttachment(CameraArm);
 
 }
 
