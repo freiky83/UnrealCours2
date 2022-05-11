@@ -41,6 +41,14 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyCamera_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyCamera;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_turnRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_turnRate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_lookUpRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_lookUpRate;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -74,9 +82,25 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera = { "MyCamera", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter_CPP, MyCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_turnRate_MetaData[] = {
+		{ "Category", "Camera" },
+		{ "ModuleRelativePath", "Character_CPP.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_turnRate = { "turnRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter_CPP, turnRate), METADATA_PARAMS(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_turnRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_turnRate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_lookUpRate_MetaData[] = {
+		{ "Category", "Camera" },
+		{ "ModuleRelativePath", "Character_CPP.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_lookUpRate = { "lookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter_CPP, lookUpRate), METADATA_PARAMS(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_lookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_lookUpRate_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACharacter_CPP_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_CameraArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_turnRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_lookUpRate,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACharacter_CPP_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACharacter_CPP>::IsAbstract,
@@ -105,7 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACharacter_CPP, 108205570);
+	IMPLEMENT_CLASS(ACharacter_CPP, 3619864411);
 	template<> COMBAT_API UClass* StaticClass<ACharacter_CPP>()
 	{
 		return ACharacter_CPP::StaticClass();
