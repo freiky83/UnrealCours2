@@ -2,12 +2,21 @@
 
 
 #include "Character_CPP.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
 
 // Sets default values
 ACharacter_CPP::ACharacter_CPP()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	CameraArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Camera_Arm"));
+	CameraArm->SetupAttachment(GetRootComponent());
+	CameraArm->TargetArmLength = 600.f;
+
+	MyCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MyCamera"));
+	CameraArm->SetupAttachment(CameraArm);
 
 }
 

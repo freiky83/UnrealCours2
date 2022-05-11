@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 	COMBAT_API UClass* Z_Construct_UClass_ACharacter_CPP();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Combat();
+	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
 	void ACharacter_CPP::StaticRegisterNativesACharacter_CPP()
 	{
@@ -31,6 +33,15 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraArm_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraArm;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyCamera_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyCamera;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,6 +56,28 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 		{ "ModuleRelativePath", "Character_CPP.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_CameraArm_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Camera" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Character_CPP.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_CameraArm = { "CameraArm", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter_CPP, CameraArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_CameraArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_CameraArm_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Camera" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Character_CPP.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera = { "MyCamera", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter_CPP, MyCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACharacter_CPP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_CameraArm,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter_CPP_Statics::NewProp_MyCamera,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACharacter_CPP_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACharacter_CPP>::IsAbstract,
 	};
@@ -54,11 +87,11 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ACharacter_CPP_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ACharacter_CPP_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter_CPP_Statics::Class_MetaDataParams))
@@ -72,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacter_CPP() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACharacter_CPP, 313127708);
+	IMPLEMENT_CLASS(ACharacter_CPP, 108205570);
 	template<> COMBAT_API UClass* StaticClass<ACharacter_CPP>()
 	{
 		return ACharacter_CPP::StaticClass();

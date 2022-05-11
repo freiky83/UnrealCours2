@@ -15,6 +15,12 @@ public:
 	// Sets default values for this character's properties
 	ACharacter_CPP();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class USpringArmComponent* CameraArm;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class UCameraComponent* MyCamera;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
